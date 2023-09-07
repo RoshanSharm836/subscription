@@ -2,15 +2,31 @@
   <div>
     <navbar />
     <div class="payment_box flex flex-col gap-8">
-      <h1 class="text-white text-5xl">Add money in wallet</h1>
-      <form class="flex justify-center gap-3" @submit="setinlocal(e)">
+      <h1 class="text-5xl">Add money in wallet</h1>
+      <!-- input for custom amount deposite -->
+      <form class="flex flex-col justify-center gap-5" @submit="setinlocal(e)">
         <input
           type="text"
           placeholder="Pls enter amount"
           class="input input-bordered w-full max-w-xs"
           v-model="amount"
         />
-        <input class="btn btn-error" type="submit" value="add money" />
+        <!-- predefine amount -->
+
+        <div class="price-box flex gap-3 justify-evenly w-full m-auto">
+          <span
+            class="price_box px-4 py-2 rounded-lg"
+            @click="selectprice"
+            v-for="(item, index) in arr"
+            :key="index"
+          >
+            {{ item }}
+          </span>
+        </div>
+        <div class="btn btn-error text-white">
+          <span> {{ amount }} </span>
+          <input type="submit" value="PAY" />
+        </div>
       </form>
     </div>
   </div>
@@ -23,6 +39,7 @@ export default {
   data() {
     return {
       amount: "",
+      arr: [500, 1500, 3000, 5000],
     };
   },
   components: { navbar },
@@ -33,14 +50,25 @@ export default {
       localStorage.setItem("amount", JSON.stringify(updatedamount));
       alert("done");
     },
+    selectprice(event) {
+      let selectedamount = +event.target.innerText;
+      this.amount = selectedamount;
+    },
   },
 };
 </script>
 
 <style>
 .payment_box {
-  margin-top: 10rem;
+  margin-top: 5rem;
   align-items: center;
   text-transform: capitalize;
+}
+.card-body {
+  align-items: center;
+}
+.price_box,
+.coupon {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 </style>

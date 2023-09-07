@@ -5,8 +5,8 @@
     </figure>
     <div class="card-body">
       <h2 class="card-title">{{ data.name }}</h2>
-      <p>{{ data.qnt }}</p>
-      <p class="font-bold">{{ data.price }}</p>
+      <p>{{ data.weight }}</p>
+      <p class="font-bold">₹ {{ data.price }}</p>
       <div class="card-actions justify-end">
         <button
           v-if="compo != 'cart'"

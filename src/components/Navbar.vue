@@ -56,7 +56,7 @@ nav {
   position: fixed;
   z-index: 100;
   width: 100%;
-  background: #1d232a;
+  background: #eeeeee;
   padding: 10px 30px;
   top: 0;
 }
