@@ -7,7 +7,7 @@
       <h2 class="card-title">{{ data.name }}</h2>
       <p>{{ data.weight }}</p>
       <p class="font-bold">₹ {{ data.price }}</p>
-      <div class="flex justify-evenly flex-wrap gap-4">
+      <div class="flex justify-evenly flex-wrap gap-4" v-if="compo == 'cart'">
         <div class="cart_box">
           <span>Quantity:- </span>
           <span>{{ data.qnt }}</span>
