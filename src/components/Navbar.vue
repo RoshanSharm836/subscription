@@ -8,7 +8,12 @@
       />
     </span>
     <div class="flex gap-4 center">
-      <span class="cursor-pointer" @click="redirect()">Subcription</span>
+      <span class="cursor-pointer" @click="redirect()"
+        >Current Subcription</span
+      >
+      <span class="cursor-pointer" @click="redirecttoproduct()"
+        >Start Subcription</span
+      >
       <div class="flex gap-2">
         <span> wallet </span>
         <span> {{ amount }}</span>
@@ -27,6 +32,9 @@ export default {
     };
   },
   methods: {
+    redirecttoproduct() {
+      this.$router.push("product");
+    },
     redirect() {
       this.$router.push("cart");
     },

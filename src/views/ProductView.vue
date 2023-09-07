@@ -2,8 +2,10 @@
   <div>
     <navbar />
     <h1 class="mt-24">Add Product</h1>
-    <div v-for="(item, index) in cartdata" :key="index">
-      <productcart v-bind:props="item" />
+    <div class="flex flex-col gap-4">
+      <div class="product" v-for="(item, index) in cartdata" :key="index">
+        <productcart v-bind:props="item" />
+      </div>
     </div>
   </div>
 </template>

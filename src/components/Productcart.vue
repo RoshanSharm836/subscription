@@ -1,12 +1,12 @@
 <template>
-  <div>
-    <div class="product">
-      <img v-bind:src="props.image" alt="img" />
+  <div class="flex w-11/12 m-auto gap-3">
+    <img v-bind:src="props.image" alt="img" class="product_img" />
+    <div class="flex w-11/12 items-center m-auto product_box">
       <div class="product_details">
         <h1>{{ props.name }}</h1>
         <h3>{{ props.weight }}</h3>
       </div>
-      <div class="product_btm">
+      <div class="product_btm flex gap-3 items-center">
         <button
           class="btn btn-active btn-accent"
           @click="dec"
@@ -22,7 +22,7 @@
         <h1>total price{{ state.total }}</h1>
       </div>
 
-      <div class="product">
+      <div class="flex justify-around">
         <select @change="fetchlocal" v-model="props.subcriptionpack" id="">
           <option value="daily">daily</option>
           <option value="alternative">alternative</option>
@@ -49,37 +49,42 @@ export default {
     add() {
       this.state.qnt++;
       this.fetchlocal();
-      total();
+      this.total();
     },
     total() {
       this.state.total = this.state.qnt * this.state.price;
       this.fetchlocal();
     },
     fetchlocal() {
+      // to set data at localstorage
       let arr = JSON.parse(localStorage.getItem("subcart")) || [];
       let newarr = arr.map((el) => {
         if (el.id === this.state.id) {
-          return this.state;
+          return this.state; // finding object by id and assigning with local obj
         } else {
           return el;
         }
       });
-      console.log(newarr);
       localStorage.setItem("subcart", JSON.stringify(newarr));
     },
   },
   mounted() {
-    this.total();
     this.state = this.props;
+    this.total();
   },
 };
 </script>
 
 <style>
-.product {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  gap: 20px;
+.product_img {
+  width: 200px;
+}
+.product_box > div {
+  width: 20%;
+}
+
+select,
+input {
+  padding: 10px;
 }
 </style>
