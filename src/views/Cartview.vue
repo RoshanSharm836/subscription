@@ -1,7 +1,10 @@
 <template>
   <div>
     <navbar />
-    <div class="cart flex flex-row gap-3 flex-wrap justify-evenly">
+    <div
+      class="cart flex flex-col w-11/12 m-auto gap-3 flex-wrap justify-evenly"
+    >
+      <h1 class="text-4xl text-center font-bold">My Subcription</h1>
       <div class="text-4xl" v-if="cartdata.length === 0">
         Pls add some products
       </div>
@@ -42,6 +45,6 @@ export default {
 
 <style>
 .cart {
-  margin-top: 10rem;
+  margin-top: 5rem;
 }
 </style>

@@ -1,12 +1,16 @@
 <template>
-  <div class="flex w-11/12 m-auto gap-3">
+  <div class="flex w-11/12 m-auto gap-3 product_container">
     <img v-bind:src="props.image" alt="img" class="product_img" />
-    <div class="flex w-11/12 items-center m-auto product_box">
-      <div class="product_details">
-        <h1>{{ props.name }}</h1>
+    <div
+      class="flex w-11/12 items-center m-auto product_box lg:flex-row sm:flex-col sm:w-11/12 sm:gap-3"
+    >
+      <div class="product_details sm:w-full lg:w-3/12 sm:m-auto">
+        <h1 class="sm:text-center font-bold text-xl">{{ props.name }}</h1>
         <h3>{{ props.weight }}</h3>
       </div>
-      <div class="product_btm flex gap-3 items-center">
+      <div
+        class="product_btm flex gap-3 items-center sm:justify-center sm:w-full lg:w-3/12 sm:m-auto"
+      >
         <button
           class="btn btn-active btn-accent"
           @click="dec"
@@ -17,12 +21,14 @@
         <span>{{ state.qnt }}</span>
         <button class="btn btn-active btn-accent" @click="add">+</button>
       </div>
-      <div class="price">
+      <div
+        class="price sm:w-full lg:w-3/12 sm:flex sm:justify-around sm:m-auto"
+      >
         <h1>Rs. {{ props.price }}</h1>
-        <h1>total price{{ state.total }}</h1>
+        <h1>Total Price: {{ state.total }}</h1>
       </div>
 
-      <div class="flex justify-around">
+      <div class="flex justify-around sm:w-full sm:flex sm:justify-around">
         <select @change="fetchlocal" v-model="props.subcriptionpack" id="">
           <option value="daily">daily</option>
           <option value="alternative">alternative</option>
@@ -79,12 +85,14 @@ export default {
 .product_img {
   width: 200px;
 }
-.product_box > div {
-  width: 20%;
-}
 
 select,
 input {
   padding: 10px;
+  background: #d9d9d9;
+}
+.product_container {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 10px 15px;
 }
 </style>

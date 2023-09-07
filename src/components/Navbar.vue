@@ -1,23 +1,25 @@
 <template>
-  <nav class="flex justify-between gap-4">
-    <span class="cursor-pointer" @click="redirecthome()">
-      <img
-        src="https://ik.imagekit.io/bharatrath/tr:n-medium/royal-hill-farm--7n86/all-business-logo-ha3ecj1xx8.png"
-        alt=""
-        class="w-10"
-      />
-    </span>
-    <div class="flex gap-4 center">
-      <span class="cursor-pointer" @click="redirect()"
-        >Current Subcription</span
-      >
-      <span class="cursor-pointer" @click="redirecttoproduct()"
-        >Start Subcription</span
-      >
-      <div class="flex gap-2">
-        <span> wallet </span>
-        <span> {{ amount }}</span>
-        <span class="cursor-pointer" @click="redirectpayment()">➕</span>
+  <nav class="">
+    <div class="w-11/12 m-auto flex justify-between gap-4 items-center">
+      <span class="cursor-pointer" @click="redirecthome()">
+        <img
+          src="https://ik.imagekit.io/bharatrath/tr:n-medium/royal-hill-farm--7n86/all-business-logo-ha3ecj1xx8.png"
+          alt=""
+          class="w-10"
+        />
+      </span>
+      <div class="flex gap-4 center">
+        <span class="cursor-pointer" @click="redirect()"
+          >Current Subcription</span
+        >
+        <span class="cursor-pointer" @click="redirecttoproduct()"
+          >Start Subcription</span
+        >
+        <div class="flex gap-2">
+          <span> wallet </span>
+          <span> {{ amount }}</span>
+          <span class="cursor-pointer" @click="redirectpayment()">➕</span>
+        </div>
       </div>
     </div>
   </nav>
