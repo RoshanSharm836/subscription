@@ -8,8 +8,10 @@
       <div class="text-4xl" v-if="cartdata.length === 0">
         Pls add some products
       </div>
-      <div v-for="(el, index) in cartdata" :key="index">
-        <Subcard v-bind:data="el" v-bind:compo="compo" />
+      <div class="flex flex-wrap justify-center mt-5">
+        <div v-for="(el, index) in cartdata" :key="index">
+          <Subcard v-bind:data="el" v-bind:compo="compo" />
+        </div>
       </div>
     </div>
   </div>

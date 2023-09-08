@@ -2,20 +2,24 @@
   <div>
     <navbar />
     <h1 class="mt-24 text-center text-3xl font-bold">Add Product</h1>
-    <div class="flex flex-col gap-4 mt-5">
-      <div class="product" v-for="(item, index) in cartdata" :key="index">
-        <productcart v-bind:props="item" />
+    <div class="flex m-auto w-11/12">
+      <div class="flex flex-col gap-4 mt-5 w-3/5">
+        <div class="product" v-for="(item, index) in cartdata" :key="index">
+          <productcart v-bind:props="item" />
+        </div>
       </div>
+      <Form />
     </div>
   </div>
 </template>
 
 <script>
 import navbar from "../components/Navbar.vue";
+import Form from "../components/Form.vue";
 import productcart from "../components/Productcart.vue";
 export default {
   name: "Product",
-  components: { productcart, navbar },
+  components: { productcart, navbar, Form },
 
   data() {
     return {

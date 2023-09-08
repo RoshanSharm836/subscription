@@ -1,9 +1,11 @@
 <template>
   <div>
     <navbar />
-    <div class="gap-3justify-evenly mainpage m-auto w-full">
-      <div v-for="data in productarr" :key="data.id">
-        <Subcard v-bind:data="data" />
+    <div class="w-full flex justify-center">
+      <div class="gap-3justify-evenly mainpage">
+        <div v-for="data in productarr" :key="data.id" class="w-4/5 m-auto">
+          <Subcard v-bind:data="data" />
+        </div>
       </div>
     </div>
   </div>
@@ -150,8 +152,8 @@ export default {
 .mainpage {
   position: absolute;
   top: 6rem;
-
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
 }
 </style>

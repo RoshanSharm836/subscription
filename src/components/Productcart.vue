@@ -12,17 +12,17 @@
         class="product_btm flex gap-3 items-center sm:justify-center sm:w-full lg:w-3/12 sm:m-auto"
       >
         <button
-          class="btn btn-active btn-accent"
-          @click="dec"
+          class="btn btn-active btmcolor"
+          @click="sub"
           :disabled="state.qnt === 0"
         >
           -
         </button>
         <span>{{ state.qnt }}</span>
-        <button class="btn btn-active btn-accent" @click="add">+</button>
+        <button class="btn btn-active btmcolor" @click="add">+</button>
       </div>
       <div
-        class="price sm:w-full lg:w-3/12 sm:flex sm:justify-around sm:m-auto"
+        class="price sm:w-full lg:w-3/12 sm:flex sm:justify-around sm:m-auto gap-2"
       >
         <h1>Rs. {{ props.price }}</h1>
         <h1>Total Price: {{ state.total }}</h1>
@@ -52,6 +52,11 @@ export default {
     };
   },
   methods: {
+    sub() {
+      this.state.qnt--;
+      this.fetchlocal();
+      this.total();
+    },
     add() {
       this.state.qnt++;
       this.fetchlocal();
@@ -94,5 +99,11 @@ input {
 .product_container {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   padding: 10px 15px;
+}
+
+.btmcolor {
+  background-color: #39d49b;
+  color: #fff;
+  font-size: larger;
 }
 </style>
