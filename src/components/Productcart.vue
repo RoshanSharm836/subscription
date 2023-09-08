@@ -49,18 +49,26 @@ export default {
   data() {
     return {
       state: {},
+      flag: "",
     };
   },
   methods: {
     sub() {
       this.state.qnt--;
+      this.flag = true;
       this.fetchlocal();
       this.total();
+      this.emitEvent();
     },
     add() {
       this.state.qnt++;
+      this.flag = false;
       this.fetchlocal();
       this.total();
+      this.emitEvent();
+    },
+    emitEvent() {
+      this.$emit("custom-event", this.flag);
     },
     total() {
       this.state.total = this.state.qnt * this.state.price;
@@ -105,5 +113,10 @@ input {
   background-color: #39d49b;
   color: #fff;
   font-size: larger;
+}
+.product_details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 </style>
