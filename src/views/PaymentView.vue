@@ -4,7 +4,7 @@
     <div class="payment_box flex flex-col gap-8">
       <h1 class="text-5xl">Add money in wallet</h1>
       <!-- input for custom amount deposite -->
-      <form class="flex flex-col justify-center gap-5" @submit="setinlocal(e)">
+      <form class="flex flex-col justify-center gap-5">
         <input
           type="text"
           placeholder="Pls enter amount"
@@ -23,7 +23,7 @@
             {{ item }}
           </span>
         </div>
-        <div class="btn btn-error text-white">
+        <div class="btn btn-error text-white" @click="setinlocal(e)">
           <span> {{ amount }} </span>
           <input type="submit" value="PAY" />
         </div>

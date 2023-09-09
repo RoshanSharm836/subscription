@@ -12,6 +12,7 @@
     "vue-router": "^4.2.4"
   },
   "devDependencies": {
+    "@iconify/vue": "^4.1.1",
     "@vitejs/plugin-vue": "^4.3.1",
     "autoprefixer": "^10.4.15",
     "daisyui": "^3.6.5",

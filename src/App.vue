@@ -4,6 +4,6 @@ name: "App"; // name of the component
 
 <template>
   <div>
-    <router-view></router-view>
+    <router-view />
   </div>
 </template>
