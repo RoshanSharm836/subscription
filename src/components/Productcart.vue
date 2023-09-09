@@ -94,29 +94,4 @@ export default {
 };
 </script>
 
-<style>
-.product_img {
-  width: 200px;
-}
-
-select,
-input {
-  padding: 10px;
-  background: #d9d9d9;
-}
-.product_container {
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  padding: 10px 15px;
-}
-
-.btmcolor {
-  background-color: #39d49b;
-  color: #fff;
-  font-size: larger;
-}
-.product_details {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-</style>
+<style></style>

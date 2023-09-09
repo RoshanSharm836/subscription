@@ -96,13 +96,4 @@ export default {
   },
 };
 </script>
-<style>
-.cart_box {
-  background: #36d399;
-  padding: 10px 15px;
-  border-radius: 15px;
-}
-.card {
-  min-height: 24rem;
-}
-</style>
+<style></style>

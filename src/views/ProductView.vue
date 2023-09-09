@@ -2,8 +2,8 @@
   <div>
     <navbar />
     <h1 class="mt-24 text-center text-3xl font-bold">Add Product</h1>
-    <div class="flex m-auto w-11/12">
-      <div class="flex flex-col gap-4 mt-5 w-3/5">
+    <div class="flex flex-col m-auto w-11/12">
+      <div class="productbox flex flex-col gap-4 mt-5 w-11/12 m-auto">
         <div class="product" v-for="(item, index) in cartdata" :key="index">
           <productcart v-bind:props="item" />
         </div>

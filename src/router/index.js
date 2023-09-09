@@ -6,7 +6,7 @@ const router = createRouter({
     {
       path: "/",
       name: "subcription",
-      component: () => import("../views/SubcriptionView.vue"),
+      component: () => import("../views/HomeView.vue"),
     },
     {
       path: "/cart",

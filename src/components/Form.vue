@@ -1,15 +1,26 @@
 <template>
-  <div class="form flex flex-col gap-3 w-2/5 mx-auto">
-    <h1 class="text-3xl font-bold">Total</h1>
-    <div class="form_box flex flex-col gap-3 w-11/12 my-auto">
-      <div>
-        <span>Item Total</span><span>₹ {{ total }}</span>
-      </div>
-      <div><span>Delivery Charge</span><span>Free</span></div>
-      <hr />
-      <div>
-        <span>Order Total</span><span>₹ {{ total }}</span>
-      </div>
+  <div className="flex flex-col gap-4 mt-20">
+    <input
+      type="text"
+      className="border-solid border-2 bg-gray-100 border-gray-100 p-2"
+      placeholder="Add a voucher"
+    />
+    <div class="w-full justify-between flex">
+      <span className="Price_spam">Sub-total</span>
+      <span>INR {{ total }}</span>
+    </div>
+    <div class="w-full justify-between flex">
+      <span className="Price_spam">Vat</span>
+      <span>INR 0.00 </span>
+    </div>
+    <div class="w-full justify-between flex">
+      <span className="Price_spam">Shipping fee</span>
+      <span>INR 0.00 </span>
+    </div>
+    <hr className=" bg-gray-100" />
+    <div class="w-full justify-between flex">
+      <span className="Price_spam">Total</span>
+      <span>INR {{ total }}</span>
     </div>
   </div>
 </template>
@@ -22,7 +33,7 @@ export default {
       let arr = JSON.parse(localStorage.getItem("subcart")) || [];
       let a = arr.reduce((sum, obj) => obj.total + sum, 0);
       this.total = a;
-      console.log(this.total);
+      // console.log(this.total);
     },
   },
   mounted() {
@@ -36,13 +47,4 @@ export default {
 };
 </script>
 
-<style>
-.form {
-  padding: 20px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-.form_box > div {
-  display: flex;
-  justify-content: space-between;
-}
-</style>
+<style></style>

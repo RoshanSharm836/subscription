@@ -28,7 +28,7 @@ export default {
           weight: "1kg",
           image:
             "https://ik.imagekit.io/bharatrath/tr:n-medium/royal-hill-farm--7n86/buttermilk-1-cmzmv61_zi.jpg",
-          price: 70,
+          price: 70.75,
           qnt: 1,
           total: 0,
           subcriptionpack: "daily",
@@ -62,7 +62,7 @@ export default {
           id: 4,
           name: "Malai Barfi",
           weight: "1kg",
-          price: 600,
+          price: 600.28,
           qnt: 1,
           total: 0,
           subcriptionpack: "daily",
@@ -148,12 +148,4 @@ export default {
 };
 </script>
 
-<style>
-.mainpage {
-  position: absolute;
-  top: 6rem;
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(4, 1fr);
-}
-</style>
+<style></style>

@@ -1,3 +1,107 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* nabvar */
+nav {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  align-items: center;
+  text-transform: capitalize;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  background: #eeeeee;
+  padding: 10px 30px;
+  top: 0;
+}
+/* home page */
+.mainpage {
+  position: absolute;
+  top: 6rem;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+}
+/* form component */
+.form {
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.form_box > div {
+  display: flex;
+  justify-content: space-between;
+}
+/* //productcart */
+.product_img {
+  width: 200px;
+}
+
+select,
+input {
+  padding: 10px;
+  background: #d9d9d9;
+}
+.product_container {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 10px 15px;
+}
+
+.btmcolor {
+  background-color: #39d49b;
+  color: #fff;
+  font-size: larger;
+}
+.product_details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* subcart */
+.cart_box {
+  background: #36d399;
+  padding: 10px 15px;
+  border-radius: 15px;
+}
+.card {
+  min-height: 24rem;
+}
+
+/* current subcription */
+
+.cart {
+  margin-top: 5rem;
+}
+
+/* wallet */
+
+.payment_box {
+  margin-top: 5rem;
+  align-items: center;
+  text-transform: capitalize;
+}
+.card-body {
+  align-items: center;
+}
+.price_box,
+.coupon {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/* //// */
+.Price_spam {
+  color: rgba(0, 0, 0, 0.6);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: -0.32px;
+}
+
+.productbox {
+  display: flex;
+  flex-direction: column;
+  max-height: 30vh;
+  overflow-y: scroll;
+}

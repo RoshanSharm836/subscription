@@ -58,17 +58,4 @@ export default {
 };
 </script>
 
-<style>
-.payment_box {
-  margin-top: 5rem;
-  align-items: center;
-  text-transform: capitalize;
-}
-.card-body {
-  align-items: center;
-}
-.price_box,
-.coupon {
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-</style>
+<style></style>

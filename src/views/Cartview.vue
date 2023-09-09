@@ -45,8 +45,4 @@ export default {
 };
 </script>
 
-<style>
-.cart {
-  margin-top: 5rem;
-}
-</style>
+<style></style>

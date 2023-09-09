@@ -71,16 +71,4 @@ export default {
 };
 </script>
 
-<style>
-nav {
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  align-items: center;
-  text-transform: capitalize;
-  position: fixed;
-  z-index: 100;
-  width: 100%;
-  background: #eeeeee;
-  padding: 10px 30px;
-  top: 0;
-}
-</style>
+<style></style>
